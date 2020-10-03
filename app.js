@@ -4,6 +4,8 @@ const InitManager = require('./core/init')
 
 const app = new Koa()
 
+process.cwd()
+
 InitManager.initCore(app);
 
 
