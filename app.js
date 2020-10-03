@@ -1,12 +1,17 @@
 const Koa = require('koa')
-const name = require('./api/v1/name.js')
-const age = require('./api/v1/age.js')
-
+const Router = require('koa-router')
+const requireDirectory = require('require-directory')
 
 const app = new Koa()
 
-app.use(name.routes())
-app.use(age.routes())
+requireDirectory(module,'./api',{visit:whenLoadModule})
+
+function whenLoadModule(obj){
+    if(obj instanceof Router){
+        app.use(obj.routes())
+    }
+}
+
 
 app.listen(3000)
 
