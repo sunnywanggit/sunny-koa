@@ -1,6 +1,6 @@
 const Router = require('koa-router')
 const router = new Router()
-const HttpException = require('../../../core/http-exception')
+const {HttpException,ParameterException} = require('../../../core/http-exception')
 
 router.post('/v1/:id/name',(ctx,next)=>{
     //获取 url 里面的参数
@@ -10,7 +10,7 @@ router.post('/v1/:id/name',(ctx,next)=>{
     const header = ctx.request.header
     const body = ctx.request.body
     if(true){
-        const error = new HttpException('错误信息',10000,400)
+        const error = new ParameterException()
         throw error
     }
 
