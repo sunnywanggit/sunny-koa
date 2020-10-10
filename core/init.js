@@ -8,6 +8,7 @@ class InitManager{
         //注意：这里是如何调用静态方法的
         InitManager.initLoadRouters()
         //将 HttpException 挂载到全局变量 global
+        InitManager.loadHttpException()
     }
 
     static initLoadRouters(){
