@@ -7,17 +7,25 @@ class InitManager{
         InitManager.app = app
         //注意：这里是如何调用静态方法的
         InitManager.initLoadRouters()
-
+        //将 HttpException 挂载到全局变量 global
     }
 
     static initLoadRouters(){
-        requireDirectory(module,'../app/api',{visit:whenLoadModule})
+        //path config
+        const apiDirectory = `${process.cwd()}/app/api`
+        requireDirectory(module,apiDirectory,{visit:whenLoadModule})
 
         function whenLoadModule(obj){
             if(obj instanceof Router){
                 InitManager.app.use(obj.routes())
             }
         }
+    }
+
+    static loadHttpException(){
+        const errors = require('../middlewares/expection')
+        global.errs = errors
+
     }
 }
 
