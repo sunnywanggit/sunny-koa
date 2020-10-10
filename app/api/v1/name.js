@@ -8,8 +8,10 @@ router.post('/v1/:id/name',(ctx,next)=>{
     const query = ctx.request.query
     const header = ctx.request.header
     const body = ctx.request.body
-    
     ctx.body = 'wangzhen hahah'
+
+    //我们在这里抛出一个异常，然后再全局进行监听并抛出错误提示信息
+    throw new Error('API Exception')
 })
 
 module.exports = router
