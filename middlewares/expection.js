@@ -1,4 +1,4 @@
-const HttpException = require("../core/http-exception")
+const {HttpException} = require("../core/http-exception")
 
 
 const catchError = async (ctx,next)=>{
@@ -16,6 +16,17 @@ const catchError = async (ctx,next)=>{
                 request:`${ctx.method} ${ctx.path}`,
             }
             ctx.status = error.code
+
+        }
+        //未知异常处理，对于未知的异常，我们是不知道原因的
+        else{
+            ctx.body = {
+                msg:'wo made a mistake ~ (。・＿・。)ﾉI’m sorry~',
+                error_code:999,
+                request:`${ctx.method} ${ctx.path}`,
+            }
+            ctx.status = 500
+
 
         }
     }
