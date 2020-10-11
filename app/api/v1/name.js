@@ -1,6 +1,7 @@
 const Router = require('koa-router')
 const router = new Router()
 const {HttpException,ParameterException} = require('../../../core/http-exception')
+const {PositiveIntegerValidator} = require('../../validators/validator')
 
 router.post('/v1/:id/name',(ctx,next)=>{
     //获取 url 里面的参数
@@ -9,12 +10,10 @@ router.post('/v1/:id/name',(ctx,next)=>{
     const query = ctx.request.query
     const header = ctx.request.header
     const body = ctx.request.body
-    if(true){
-        const error = new ParameterException()
-        throw error
-    }
 
-    ctx.body = 'wangzhen hahah'
+    const v = new PositiveIntegerValidator().validate(ctx)
+
+    ctx.body = 'success'
 })
 
 module.exports = router
