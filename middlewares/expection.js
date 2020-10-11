@@ -5,10 +5,17 @@ const catchError = async (ctx,next)=>{
     try{
         await next()
     }catch(error){
+        const isHttpException = error instanceof HttpException
+        const isDev = global.config.enviroment
+
+        if(isDev && !isHttpException){
+            throw error
+        }
+
         /*
         首先我们需要知道，我们待处理的异常是已知异常还是未知异常
         */
-        if(error instanceof HttpException){
+        if(isHttpException){
             ctx.body = {
                 msg:error.msg,
                 //这里为了保持接口的兼容，所以我们这里使用下划线
