@@ -9,6 +9,13 @@ class InitManager{
         InitManager.initLoadRouters()
         //将 HttpException 挂载到全局变量 global
         InitManager.loadHttpException()
+        InitManager.loadConfig()
+    }
+
+    static loadConfig(path=''){
+        const configPath = path || process.cwd() + '/config/config.js'
+        const config = require(configPath)
+        global.config = config
     }
 
     static initLoadRouters(){
@@ -26,6 +33,7 @@ class InitManager{
     static loadHttpException(){
         const errors = require('../middlewares/expection')
         global.errs = errors
+
 
     }
 }
