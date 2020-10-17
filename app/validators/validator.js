@@ -1,4 +1,6 @@
-const {LinValidator,Rule} = require('../../core/lin-validator')
+const {LinValidator,Rule} = require('../../core/lin-validator');
+const { User } = require('../modules/user');
+
 
 class PositiveIntegerValidator extends LinValidator{
     constructor(){
@@ -49,9 +51,17 @@ class RegisterValidator extends LinValidator{
     }
 
     //保证 email 的唯一性
-    validateEmail(vals){
+    async validateEmail(vals){
         const email = vals.body.email
-
+        const user = await User.findOne({
+            where:{
+                //数据库的字段必须要等我们传进来的参数 email
+                email:email
+            }
+        })
+        if(user){
+            throw new Error('email 已存在')
+        }
     }
 }
 
