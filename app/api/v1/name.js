@@ -12,6 +12,8 @@ router.post('/v1/:id/name',(ctx,next)=>{
     const body = ctx.request.body
 
     const v = new PositiveIntegerValidator().validate(ctx)
+    const id = v.get('path.id')
+    console.log(id);
 
     ctx.body = 'success'
 })

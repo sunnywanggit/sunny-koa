@@ -1,4 +1,3 @@
-
 const {LinValidator,Rule} = require('../../core/lin-validator')
 
 class PositiveIntegerValidator extends LinValidator{
@@ -11,25 +10,36 @@ class PositiveIntegerValidator extends LinValidator{
     }
 }
 
+//用户注册规则校验
 class RegisterValidator extends LinValidator{
-    constructor(){
-        super()
+    constructor() {
+        super();
         this.email = [
-            new Rule('isEmail','请填写正确的 Email',)
+            new Rule('isEmail', '电子邮箱不符合规范，请输入正确的邮箱')
         ]
         this.password1 = [
-            new Rule('isLength','最少6个字符，最多32个字符',{min:6,max:32}),
-            //我们不希望用户的密码里面存在危险的字符，所以我们要指定用户密码的字符范围
-            new Rule('matchs','密码长度必须在6~22位之间，包含字符、数字和 _','^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]'),
+            // 用户密码指定范围
+            new Rule('isLength', '密码至少6个字符，最多22个字符', {
+                min: 6,
+                max: 22
+            }),
+            new Rule(
+                'matches',
+                '密码长度必须在6~22位之间，包含字符、数字和 _ ',
+                '^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]'
+            )
         ]
         this.password2 = this.password1
         this.nickname = [
-            new Rule('isLength','昵称不符合长度规范',{min:2,max:10}),
+            new Rule('isLength', '昵称长度必须在4~32之间', {
+                min: 4,
+                max: 32
+            }),
         ]
-        
     }
 
     //我们可以通过用户传递过来的参数拿到 password1 和 password2 ，然后对二者的相等性进行校验,注意，该函数必须以 validate 开头
+    //参数 vals 将包含用户传递过来的所有参数
     validatePassword(vals){
         const psw1 = vals.body.password1
         const psw2 = vals.body.password2
@@ -37,8 +47,15 @@ class RegisterValidator extends LinValidator{
             throw new Error('两个密码必须相同')
         }
     }
+
+    //保证 email 的唯一性
+    validateEmail(vals){
+        const email = vals.body.email
+
+    }
 }
 
 module.exports = {
-    PositiveIntegerValidator
+    PositiveIntegerValidator,
+    RegisterValidator
 }
