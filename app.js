@@ -5,6 +5,8 @@ const InitManager = require('./core/init')
 const { params } = require('./app/api/v1/age')
 const catchError = require('./middlewares/expection')
 
+require('./app/modules/user')
+
 const app = new Koa()
 //注册全局处理异常中间件
 app.use(catchError)
