@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d53df44-6070-47cd-8683-8e9c757ba81c" name="Default Changelist" comment="链接数据库相关配置">
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/v1/name.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/name.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/v1/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/v1/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validators/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/validators/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1imUAIK03vrGFmlT80IIFLjozk7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jinke/member-center/funPark/member-center" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\softinstall\webstorm\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d53df44-6070-47cd-8683-8e9c757ba81c" name="Default Changelist" comment="" />
+      <created>1602512116306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602512116306</updated>
+      <workItem from="1602512117403" duration="1043000" />
+      <workItem from="1602513265659" duration="2534000" />
+      <workItem from="1602556142161" duration="605000" />
+      <workItem from="1602572415995" duration="985000" />
+      <workItem from="1602590643261" duration="672000" />
+      <workItem from="1602591349083" duration="11000" />
+      <workItem from="1602630475883" duration="1251000" />
+    </task>
+    <task id="LOCAL-00001" summary="新增数据库配置">
+      <created>1602512896116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602512896116</updated>
+    </task>
+    <task id="LOCAL-00002" summary="链接数据库相关配置">
+      <created>1602514216853</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602514216853</updated>
+    </task>
+    <task id="LOCAL-00003" summary="演示 require 引入文件如何配置别名">
+      <created>1602514462737</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602514462737</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新增数据库配置" />
+    <MESSAGE value="链接数据库相关配置" />
+    <MESSAGE value="演示 require 引入文件如何配置别名" />
+    <option name="LAST_COMMIT_MESSAGE" value="演示 require 引入文件如何配置别名" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="243" y="6" key="CommitChangelistDialog2" timestamp="1602514461831">
+      <screen x="0" y="0" width="1463" height="874" />
+    </state>
+    <state x="243" y="6" key="CommitChangelistDialog2/0.0.1463.874@0.0.1463.874" timestamp="1602514461831" />
+    <state x="512" y="192" key="FileChooserDialogImpl" timestamp="1602591358083">
+      <screen x="0" y="0" width="1463" height="874" />
+    </state>
+    <state x="512" y="192" key="FileChooserDialogImpl/0.0.1463.874@0.0.1463.874" timestamp="1602591358083" />
+    <state x="324" y="157" key="Vcs.Push.Dialog.v2" timestamp="1602514465693">
+      <screen x="0" y="0" width="1463" height="874" />
+    </state>
+    <state x="324" y="157" key="Vcs.Push.Dialog.v2/0.0.1463.874@0.0.1463.874" timestamp="1602514465693" />
+    <state x="394" y="184" width="672" height="678" key="search.everywhere.popup" timestamp="1602631053849">
+      <screen x="0" y="0" width="1463" height="874" />
+    </state>
+    <state x="394" y="184" width="672" height="678" key="search.everywhere.popup/0.0.1463.874@0.0.1463.874" timestamp="1602631053849" />
+  </component>
+</project>
