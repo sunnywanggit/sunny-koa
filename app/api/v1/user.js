@@ -1,5 +1,4 @@
 const bcrypt = require('bcryptjs')
-
 const Router = require('koa-router')
 const {User} = require('../../modules/user')
 
@@ -18,6 +17,8 @@ router.post('/register',async (ctx)=>{
         password:v.get('body.password2'),
     }
     const result = await User.create(user)
+    //告诉用户他们注册成功了
+    throw new global.errs.Success()
 })
 
 module.exports = router
